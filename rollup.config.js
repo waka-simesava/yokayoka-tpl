@@ -5,7 +5,7 @@ import babel from 'rollup-plugin-babel';
 export default {
   output: {
     format: 'iife',
-    dir: 'dist/assets/js'
+    dir: 'dist/_assets/js'
   },
   plugins: [
     resolve({
