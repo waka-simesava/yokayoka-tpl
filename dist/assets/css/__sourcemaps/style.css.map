@@ -1,0 +1,11 @@
+{
+	"version": 3,
+	"file": "../style.css",
+	"sources": [
+		"../../../../src/assets/sass/style.scss",
+		"../../../../sample/**/*.scss",
+		"../../../../src/assets/sass/sample/_test.scss"
+	],
+	"names": [],
+	"mappings": "AEAA,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,KAAK;CACb;;AFAD,AAAA,IAAI,CAAC;EACH,OAAO,EAAE,KAAK;CACf;;AACD,AAAA,EAAE,CAAC;EACD,KAAK,EAAE,aAAa;CACrB"
+}
