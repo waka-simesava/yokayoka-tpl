@@ -8,25 +8,33 @@
     "clean/js": "rimraf dist/assets/js && mkdir -p dist/assets/js",
     "clean/images": "rimraf dist/assets/images && mkdir -p dist/assets/images",
     "clean": "npm-run-all clean/*",
-    "html/plain": "cpx 'src/assets/html/**/*.html' 'dist/'",
-    "html/ejscli": "ejs-cli --base-dir src/assets/ejs '**/*.ejs' --out dist",
-    "html": "npm-run-all html/*",
     "css/sass": "node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js -o dist/assets/css src/assets/sass/style.scss --output-style expanded --source-map dist/assets/css/__sourcemaps/",
     "css/postcss": "postcss dist/assets/css/style.css -o dist/assets/css/style.min.css",
     "css": "npm-run-all -s css/*",
+    "html/plain": "cpx 'src/assets/html/**/*.html' 'dist/'",
+    "html/ejscli": "ejs-cli --base-dir src/assets/ejs '**/*.ejs' --out dist",
+    "html": "npm-run-all html/*",
     "js/rollup": "rollup src/assets/js/index.js -c=rollup.config.js",
     "js/uglifyjs": "uglifyjs dist/assets/js/index.js -o dist/assets/js/index.min.js",
     "js": "npm-run-all -s js/*",
     "images/imagemin": "node imagemin.js",
     "images": "npm-run-all -s images/*",
-    "watch/html": "watch 'npm run html' ./src/assets/html",
     "watch/css": "watch 'npm run css' ./src/assets/sass",
+    "watch/html": "watch 'npm run html' ./src/assets/html",
     "watch/js": "watch 'npm run js' ./src/assets/js",
     "watch/images": "onchange 'src/assets/images' -e '**/*.DS_Store' -- npm run images",
     "watch/server": "browser-sync start -s ./dist -f 'dist, ./dist/**/*'",
     "watch": "npm run clean && npm-run-all -p watch/*"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waka-simesava/yokayoka-tpl.git"
+  },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/waka-simesava/yokayoka-tpl/issues"
+  },
+  "homepage": "https://github.com/waka-simesava/yokayoka-tpl#readme",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
